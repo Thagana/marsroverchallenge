@@ -2,7 +2,6 @@
 /* eslint-disable import/first */
 import express from 'express';
 import cors from 'cors';
-import helmet from 'helmet';
 
 import routes from './routes/routes';
 
@@ -13,7 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(helmet());
 
 routes(app);
 

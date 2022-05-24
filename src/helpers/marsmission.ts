@@ -25,7 +25,10 @@ const move = (
   y: number,
   heading: string
 ) => {
-
+  // const terrain = Terrain(x, y);
+  // if (!terrain.canMove) {
+  //   return [x, y];
+  // }
   switch (heading) {
     case "N":
       y++;
