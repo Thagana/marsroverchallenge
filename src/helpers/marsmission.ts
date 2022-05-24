@@ -1,4 +1,4 @@
-//This is the plateu constrains in killometre
+//This is the plateau constrains in kilometer
 const MAP = { x: 1000, y: 1000 }
 
 /**
@@ -9,26 +9,14 @@ const MAP = { x: 1000, y: 1000 }
  * @returns { canMove: boolean }
  */
 
-const Terrain = (x: number, y: number) => {
-  if ((x - 1 < 0 )|| (y - 1 < 0)) {
-    return {
-      canMove: false,
-    };
-  }
-  return {
-    canMove: true,
-  };
-};
+
 
 const move = (
   x: number,
   y: number,
   heading: string
 ) => {
-  // const terrain = Terrain(x, y);
-  // if (!terrain.canMove) {
-  //   return [x, y];
-  // }
+
   switch (heading) {
     case "N":
       y++;
@@ -106,6 +94,7 @@ const marsRover = (info: string, movement: string) => {
     } else {
       heading = roverDirection(item, heading);
     }
+    // write positions
   });
 
     return {
