@@ -16,6 +16,17 @@ const move = (
   y: number,
   heading: string
 ) => {
+  const localX = x;
+  const localY = y
+  // prevent out of bounds
+  if (heading === 'S' && ((localY - 1) < 0)) {
+    return [x, y];
+  }
+
+  // prevent out of bounds
+  if (heading === 'W' && ((localX - 1) < 0)) {
+    return [x, y];
+  }
 
   switch (heading) {
     case "N":
