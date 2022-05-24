@@ -22,6 +22,6 @@
 ```
 
 ### Run test
-```
-    $ yarn test
+```bash
+    yarn test
 ```
